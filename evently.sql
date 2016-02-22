@@ -19,6 +19,10 @@
 -- Table structure for table `test`
 --
 
+DROP USER `event`@`localhost`; /* Uncomment to run script again */
+CREATE USER `event`@`localhost` IDENTIFIED BY 'event';
+GRANT SELECT,UPDATE,DELETE,INSERT ON companydb.* TO `event`@`localhost`;
+
 DROP TABLE IF EXISTS `test`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
